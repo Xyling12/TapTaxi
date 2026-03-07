@@ -3,15 +3,36 @@ TapTaxi. *.apk
 ТапТакси*.apk
 tap_taxi_SIGNED*.apk
 taptaxi-*.apk
+Tap.apk
+tap.apk
 
-# Декомпилированные папки (очень тяжёлые)
+# Декомпилированные папки (очень тяжёлые — сотни MB)
 taptaxi_326_decompiled/
 taptaxi_326_original/
 taptaxi_328_decompiled/
 taptaxi_decompiled/
 taptaxi_v2_decompiled/
 taptaxi_v2_decompiled_check/
+tap_taxi_signed_decompiled/
+taptaxi_328_p10_decompiled/
+taptaxi_fresh_decompiled/
+tap_fresh_decompiled/
 
-# Патченые/подписанные APK — ВКЛЮЧАЕМ в git
-# taptaxi_326_p*.apk  ← включаем
-# taptaxi_328_p*.apk  ← включаем
+# APK временные файлы
+*.apktool_temp
+
+# Keystore — секретный ключ
+*.jks
+
+# Патченые unsigned APK — включаем только финальный
+# остальные промежуточные исключаем
+taptaxi_326_p*.apk
+taptaxi_328_p[0-9].apk
+taptaxi_328_p10.apk
+taptaxi_328_p11.apk
+taptaxi_p14_unsigned.apk
+taptaxi_p15_unsigned.apk
+taptaxi_p16_unsigned.apk
+
+# Итоговый unsigned APK — ВКЛЮЧАЕМ:
+# taptaxi_fresh_patched_unsigned.apk ← в git
